@@ -1,3 +1,11 @@
+body, html {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+}
+
 .app {
   justify-content: center;
   font-family: Arial, sans-serif;

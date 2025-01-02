@@ -9,6 +9,6 @@ Currently, two official plugins are available:
 # Todo-List
 # Todo-application
 #Project Details:
--Start Date = 28 dec,2024
--End Date = 28 dec,2024
+Start Date = 28 dec,2024
+End Date = 28 dec,2024
 Time Duration of Project = 2 hours

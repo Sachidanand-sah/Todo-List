@@ -8,3 +8,7 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # Todo-List
 # Todo-application
+#Project Details:
+-Start Date = 28 dec,2024
+-End Date = 28 dec,2024
+Time Duration of Project = 2 hours

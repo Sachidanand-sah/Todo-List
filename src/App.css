@@ -1,105 +1,161 @@
-body, html {
+body {
   margin: 0;
-  justify-content: center;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(-45deg, #1e3c72, #2a5298, #fbc2eb, #a1c4fd);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+  height: 100vh;
+  display: flex;
   align-items: center;
-  background-color: #c04848;
+  justify-content: center;
+  color: #ffffff;
+  overflow: hidden;
 }
 
-.app {
-  justify-content: center;
-  font-family: Arial, sans-serif;
-  max-width: 600px;
-  margin: 0 auto;
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#todo-container {
+  background: rgba(0, 0, 0, 0.85);
+  border-radius: 15px;
   padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 450px;
+  width: 85%;
+  height: 85vh;
+  text-align: center;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
-  text-align: center;
-  color: #333;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
 }
 
-.todo-list form {
-  display: flex;
-  margin-bottom: 20px;
-
+form {
+  margin-bottom: 15px;
 }
 
-.todo-list input {
-  flex: 1;
+input, select, button {
+  margin-bottom: 10px;
+  border-radius: 5px;
   padding: 10px;
-  font-size: 16px;
+}
+
+input, select {
   border: 1px solid #ccc;
-  border-radius: 4px;
+  width: calc(100% - 20px);
+  font-size: 1rem;
 }
 
-.todo-list button {
-  padding: 10px 20px;
-  font-size: 16px;
-  color: #fff;
-  background-color: #007bff;
+button {
+  background: #0056b3;
   border: none;
-  border-radius: 4px;
+  color: #fff;
   cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  font-size: 1rem;
 }
 
-.todo-list button:hover {
+button:hover {
+  transform: scale(1.05);
   background-color: #0056b3;
 }
 
-.filters {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 20px;
+button:focus {
+  outline: none;
 }
 
-.filters button {
-  padding: 5px 10px;
-  font-size: 14px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  background-color: #e0e0e0;
-}
-
-.filters button:hover {
-  background-color: #d6d6d6;
-}
-
-.todo-item {
+.filter-buttons {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
-  margin: 5px 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-}
-
-.todo-item span {
-  display: flex;
-  align-items: center;
+  margin-bottom: 15px;
   gap: 10px;
 }
 
-.todo-item.completed span {
-  text-decoration: line-through;
-  color: #888;
+.filter-buttons button {
+  flex: 1;
+  padding: 10px 0;
+  font-size: 1rem;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+  text-align: center;
 }
 
-.todo-item button {
-  background-color: #dc3545;
-  color: #fff;
+.filter-buttons button:hover {
+  transform: scale(1.05);
+  background-color: #495057;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+  margin: 0;
+  max-height: 55vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc transparent;
+}
+
+ul::-webkit-scrollbar {
+  width: 8px;
+}
+
+ul::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+ul::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+li {
+  text-align: left;
+  margin: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.text-decoration-line-through {
+  color: #433f3f;
+  text-decoration: line-through;
+}
+
+li button {
+  background: #dc3545;
+  color: white;
   border: none;
   padding: 5px 10px;
-  border-radius: 4px;
-  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.todo-item button:hover {
-  background-color: #b02a37;
+li button:hover {
+  transform: scale(1.1);
+  background-color: #c82333;
+}
+
+li button:focus {
+  outline: none;
 }

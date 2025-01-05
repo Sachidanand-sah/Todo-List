@@ -55,7 +55,7 @@ A feature-rich, responsive Todo List application built using React and Firebase.
      import { getFirestore } from 'firebase/firestore';
 
      const firebaseConfig = {
-         apiKey: "AIzaSyDYfAUHCsJhGoAu1OcbxvyxUpjb6rZQ79M",
+         apiKey: "",
          authDomain: "todo-application-bba81.firebaseapp.com",
          databaseURL: "https://todo-application-bba81-default-rtdb.firebaseio.com",
          projectId: "todo-application-bba81",
